@@ -1,27 +1,76 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Test.com</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="assets/css/test.css">
-		
+<head>
+	<title>Test.com</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="assets/css/test.css">
+	<script>
+		const Multilineinput1 = document.getElementById("Multilineinput1");
+		const Multilineinput2 = document.getElementById("Multilineinput2");
 
-	</head>
+		function calculate() {
+			Multilineinput2.value = Multilineinput1.value;
+		}
 
-	<body>
+		function drawLine() {
+            var canvas = document.getElementById("myCanvas");
+            var canvasCursor = canvas.getContext("2d");
+            canvasCursor.moveTo(0, 0);
+			
+			for (let i = 0; i < 1; i += 0.1)
+			{
+				for (let c = 0; c < 1; c += 0.1)
+				{
+					let x = i * canvas.clientWidth;
+					let y = c * canvas.clientHeight;					
+                    canvasCursor.beginPath();
+					canvasCursor.arc(x, y, Math.random() * 30, 0, 2 * Math.PI);
+					canvasCursor.fill();
+				}
+
+			}
+            canvasCursor.stroke();
+
+		}
+	</script>
+
+</head>
+
+	<body  onload="drawLine();">
+
 		<div class="DivContent">
 			<section>
-				<h1>The last Rest</h1>
-				<p>Looking back in time, when was the last time you had a chance to reflect, to think, to rest? Our minds wander, day in day out. At Some point one should stop and breathe in the world. See the beauty of this existance, the beauty of emotions and feelings. Away from any and all distractions. Away from responsibilities. Away from oneself even.
-				Start to wander physically instead of mentally. </p>
+				<h1>Quotes</h1>
+				<!--
+					<p>
+						Looking back in time, when was the last time you had a chance to reflect, to think, to rest? Our minds wander, day in day out. At Some point one should stop and breathe in the world. See the beauty of this existance, the beauty of emotions and feelings. Away from any and all distractions. Away from responsibilities. Away from oneself even.
+						Begin wandering physically instead of mentally.
+					</p>
+				-->
 				<p>“When I am working on a problem, I never think about beauty but when I have finished, if the solution is not beautiful, I know it is wrong” </p>
-				<h2>Unspoken Balance</h2>
-				<h2>Tireless Action</h2>
 
-				<div>	
-					<button><p>test</p></button>
-					<script src="assets\js\log.js"></script>
-				</div>
+				<!--
+					<div>
+						<button><p>test</p></button>
+						<script src="assets\js\log.js"></script>
+					</div>
+				-->
+				<!--
+				<section class="SplitSection">
+					<div class="FlexDiv">
+						<textarea class="MultilineInput" id="Multilineinput1"></textarea>
+					</div>
+					<div class="FlexDiv">
+						<textarea class="MultilineInput" id="Multilineinput2"></textarea>
+					</div>
+				</section>
+				
+
+				<button onclick=calculate();>Test</button>
+				<button onclick=drawLine();>Line</button>
+				-->
+				<canvas id="myCanvas" width="800" height="800" style="margin: 0 auto; display: block;">
+				</canvas>
 			</section>
 		</div>
 	</body>

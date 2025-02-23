@@ -8,6 +8,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 h1 {
@@ -15,6 +16,7 @@ h1 {
     font-weight: 600;
     font-size: 30px;
     text-align: center;
+    margin: 0 auto 10px auto;
     color: var(--color-text );
 }
 
@@ -23,20 +25,40 @@ h2 {
     font-weight: 600;
     font-size: 20px;
     text-align: center;
+    margin: 0 auto 8px auto;
     color: var(--color-text );
 }
 
 p {
     font-family: Arial;
     font-weight: 500;
-    font-size: 18px;
-    width: 1000px;
-    margin: 0 auto;
+    width: 60%;
+    margin: 0 auto 8px auto;
     color: var(--color-text );
 }
-body{
-    background-color: var(--color-tertiary);
+
+body {
+    background-color: var(--color-primary);
 }
+
 .DivContent {
-    background: linear-gradient(0deg, var(--color-tertiary), var(--color-primary));
+    background: linear-gradient(0deg, var(--color-primary), white);
+}
+
+.SplitSection {
+    display: flex;
+    width: 60%;
+    height: 50%;
+    margin: 0 auto 8px auto;
+    justify-content: center;
+}
+
+.FlexDiv {
+    margin: 0 auto;
+    width: auto;
+    flex-grow: 1;
+}
+
+.MultilineInput {
+    width: 90%;
 }

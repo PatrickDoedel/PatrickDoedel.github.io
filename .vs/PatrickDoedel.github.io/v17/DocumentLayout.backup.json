@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 196,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -60,9 +60,10 @@
               "RelativeDocumentMoniker": "assets\\js\\calculate.js",
               "ToolTip": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\js\\calculate.js",
               "RelativeToolTip": "assets\\js\\calculate.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-23T16:01:06.57Z"
+              "WhenOpened": "2025-02-23T16:01:06.57Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -74,11 +75,8 @@
               "RelativeToolTip": "assets\\css\\test.css",
               "ViewState": "AgIAACQAAAAAAAAAAAAwwDQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-23T15:14:48.899Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2025-02-23T15:14:48.899Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -88,7 +86,7 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-02-23T15:14:22.705Z",
               "EditorCaption": ""

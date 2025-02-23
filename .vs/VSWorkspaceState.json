@@ -3,9 +3,9 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\css\\images",
-    "\\assets\\js"
+    "\\assets\\js",
+    "\\images"
   ],
-  "SelectedNode": "\\index2.html",
+  "SelectedNode": "\\assets\\css\\ie9.css",
   "PreviewInSolutionExplorer": false
 }

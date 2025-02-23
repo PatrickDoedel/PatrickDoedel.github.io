@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\js\\log.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\js\\log.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\css\\test.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -22,8 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 196,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "log.js",
+              "DocumentMoniker": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\js\\log.js",
+              "RelativeDocumentMoniker": "assets\\js\\log.js",
+              "ToolTip": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\js\\log.js",
+              "RelativeToolTip": "assets\\js\\log.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-23T11:59:52.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-23T11:58:51.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "test.css",
+              "DocumentMoniker": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\css\\test.css",
+              "RelativeDocumentMoniker": "assets\\css\\test.css",
+              "ToolTip": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\css\\test.css",
+              "RelativeToolTip": "assets\\css\\test.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-22T13:19:59.117Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1591247812:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
@@ -55,45 +94,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index2.html",
-              "DocumentMoniker": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index2.html",
-              "RelativeDocumentMoniker": "index2.html",
-              "ToolTip": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index2.html",
-              "RelativeToolTip": "index2.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-02-22T13:44:32.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "test.css",
-              "DocumentMoniker": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\css\\test.css",
-              "RelativeDocumentMoniker": "assets\\css\\test.css",
-              "ToolTip": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\assets\\css\\test.css",
-              "RelativeToolTip": "assets\\css\\test.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-22T13:19:59.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\DOKUMENTE\\Github Repos\\PatrickDoedel.github.io\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAAYAAAAAAAAAAIAxwBMAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-02-22T13:04:39.915Z",
-              "EditorCaption": ""
             }
           ]
         },

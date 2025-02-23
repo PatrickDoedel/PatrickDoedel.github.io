@@ -1,3 +1,42 @@
-.banner{
-    
+:root {
+    --color-primary: hsl(195, 30%, 70%);
+    --color-text: hsl(131, 50%, 10%);
+    --color-tertiary: hsl(191, 80%, 20%);
+    --color-accent: hsl(71, 80%, 20%);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    color: var(--color-text );
+}
+
+h2 {
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: var(--color-text );
+}
+
+p {
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 18px;
+    width: 1000px;
+    margin: 0 auto;
+    color: var(--color-text );
+}
+body{
+    background-color: var(--color-tertiary);
+}
+.DivContent {
+    background: linear-gradient(0deg, var(--color-tertiary), var(--color-primary));
 }

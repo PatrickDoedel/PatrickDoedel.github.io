@@ -50,18 +50,51 @@
 					const input1 = document.getElementById('input1');
 					const input2 = document.getElementById('input2');
 					const output = document.getElementById('output');
+					const pattern = /C\d{6}\.\d{2}/; // Regex pattern
+                    const pattern2 = /d{6}/; // Regex pattern
+                    const pattern3 = /d{6}/; // Regex pattern
+
+
 					function updateOutput()
 					{
                         output.value = "";							
                         let input_1 = input1.value.split("\n");
 						let input_2 = input2.value.split("\n");
+
+						for (let i = 0; i < input_1.length; i++)
+						{
+							try
+							{
+								input_1[i] = input_1[i].match(pattern)[0];
+							}
+							catch
+							{
+
+							}
+						}
+
+						for (let i = 0; i < input_2.length; i++)
+						{
+							try
+							{
+								input_2[i] = input_2[i].match(pattern)[0];
+                            }
+							catch
+							{
+
+							}
+						}
+
 						for (let i = 0; i < input_1.length; i++)
 						{
                             output.value += input_2.indexOf(input_1[i]) + 1 + "\n";
 						}
+						console.log(input_2, input_1, output);
 					}
+
 					input1.addEventListener('input', updateOutput);
 					input2.addEventListener('input', updateOutput);
+
 				</script>
 			</section>
 		</div>

@@ -42,7 +42,112 @@
 					Begin wandering physically instead of mentally.
 				</p>
 				-->
-				<p>“When I am working on a problem, I never think about beauty but when I have finished, if the solution is not beautiful, I know it is wrong” </p>
+				<p>“When I am working on a problem, I never think about beauty but when I have finished, if the solution is not beautiful, I know it is wrong” 
+				Public Sub StrukturbaumSortieren()
+
+
+    Dim unsortedOccurrences() As ComponentOccurrence
+    ReDim unsortedOccurrences(assemblyCDef.Occurrences.Count - 1)
+
+    Dim i As Long
+    For i = 1 To assemblyCDef.Occurrences.Count
+        'unsortedOccurrences(i - 1) = assemblyCDef.Occurrences(i)
+    Next
+
+    On Error Resume Next
+
+    Dim oTransaction As Transaction
+    Set oTransaction = ThisApplication.TransactionManager.StartTransaction(document, "Sort Components")
+  
+    Dim oPane As BrowserPane
+    Set oPane = document.BrowserPanes.Item("AmBrowserArrangement")
+
+    Dim oPreviousOcc As ComponentOccurrence
+    Set oPreviousOcc = Nothing
+
+    Dim j As Long
+    For j = 1 To assemblyCDef.Occurrences.Count
+
+        Dim oThisOcc As ComponentOccurrence
+        Set oThisOcc = assemblyCDef.Occurrences.ItemByName(sortByClipboard(unsortedOccurrences)(j - 1).Name)
+
+
+        If oThisOcc.PatternElement Is Nothing Then
+
+            Dim oThisNodeDef As BrowserNodeDefinition
+            Set oThisNodeDef = document.BrowserPanes.GetNativeBrowserNodeDefinition(oThisOcc)
+
+            Dim oThisBrowserNode As BrowserNode
+            Set oThisBrowserNode = oPane.TopNode.AllReferencedNodes(oThisNodeDef).Item(1)
+
+            If Not oPreviousOcc Is Nothing Then
+
+                Dim oPreviousNodeDef As BrowserNodeDefinition
+                Set oPreviousNodeDef = document.BrowserPanes.GetNativeBrowserNodeDefinition(oPreviousOcc)
+
+                Dim oPreviousBrowserNode As BrowserNode
+                Set oPreviousBrowserNode = oPane.TopNode.AllReferencedNodes(oPreviousNodeDef).Item(1)
+
+                Call oPane.Reorder(oPreviousBrowserNode, False, oThisBrowserNode)
+
+                If Err.Number Then
+
+                    oTransaction.Abort
+                    MsgBox "Sorting failed.", vbExclamation
+
+                Exit Sub
+                End If
+            Else
+
+                'Move the first node below origin folder
+
+                Dim oFirstBrowserNode As BrowserNode
+                Dim oTempNode As BrowserNode
+
+                For Each oTempNode In oPane.TopNode.BrowserNodes
+
+                    Dim oNativeObject As Object
+                    Set oNativeObject = oTempNode.BrowserNodeDefinition.NativeObject
+
+                    If Not oNativeObject Is Nothing Then
+
+                        If TypeOf oNativeObject Is ComponentOccurrence Or TypeOf oNativeObject Is OccurrencePattern Then
+
+                            Set oFirstBrowserNode = oTempNode
+
+                        Exit For
+                        End If
+                    End If
+                Next
+                Call oPane.Reorder(oFirstBrowserNode, True, oThisBrowserNode)
+                Err.Clear
+            End If
+          Set oPreviousOcc = oThisOcc
+        End If
+    Next
+
+    oTransaction.End
+
+End Sub
+
+Function getClipboard() As String
+    Dim clipboard As MSForms.DataObject
+    Set clipboard = New MSForms.DataObject
+    clipboard.GetFromClipboard
+    getClipboard = clipboard.GetText
+End Function
+
+Public Function vergleiche(str As String, muster As String) As Boolean
+    Dim regex As New RegExp
+    regex.Pattern = muster
+    vergleiche = regex.Test(str)
+End Function
+
+Public Function sortByClipboard(unsortedOccurrences() As ComponentOccurrence) As ComponentOccurrence()
+    Dim sortedArray() As ComponentOccurrence
+    ReDim sortedArray(UBound(unsortedOccurrences)) ' Use UBound to get the upper bound of the array
+    sortByClipboard = sortedArray ' Return the sorted array
+End Function</p>
 				<canvas id="myCanvas" width="800" height="800" style="margin: 0 auto; display: block;">
 				</canvas>
 

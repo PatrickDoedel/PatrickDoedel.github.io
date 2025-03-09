@@ -5,84 +5,95 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="assets/css/test.css">
 	<script>
-		const Multilineinput1 = document.getElementById("Multilineinput1");
-		const Multilineinput2 = document.getElementById("Multilineinput2");
-		function calculate() {
-			Multilineinput2.value = Multilineinput1.value;
-		}
 		function drawLine() {
             var canvas = document.getElementById("myCanvas");
             var canvasCursor = canvas.getContext("2d");
             canvasCursor.moveTo(0, 0);
-			for (let i = 0; i < 1; i += 0.1)
+			for (let r = 0; r < 1; r += 0.1)
 			{
 				for (let c = 0; c < 1; c += 0.1)
 				{
-					let x = i * canvas.clientWidth;
+					let x = r * canvas.clientWidth;
 					let y = c * canvas.clientHeight;					
-          canvasCursor.beginPath();
+					canvasCursor.beginPath();
 					canvasCursor.arc(x, y, Math.random() * 30, 0, 2 * Math.PI);
 					canvasCursor.fill();
 				}
 			}
-            canvasCursor.stroke();
 		}
 	</script>
 </head>
 	<body  onload="drawLine();">
 		<div class="DivContent">
-			<section>
-				<textarea id="input1" placeholder="Enter text here..." rows="20"></textarea>
-				<textarea id="input2" placeholder="Enter text here..." rows="20"></textarea>
-				<textarea id="output" placeholder="Output will appear here..." rows="20"></textarea>
-				<h1>Quotes</h1>
-				<!--
-				<p>
-					Looking back in time, when was the last time you had a chance to reflect, to think, to rest? Our minds wander, day in day out. At Some point one should stop and breathe in the world. See the beauty of this existance, the beauty of emotions and feelings. Away from any and all distractions. Away from responsibilities. Away from oneself even.
-					Begin wandering physically instead of mentally.
-				</p>
-				-->
-				<p>“When I am working on a problem, I never think about beauty but when I have finished, if the solution is not beautiful, I know it is wrong” </p>
-				<canvas id="myCanvas" width="800" height="800" style="margin: 0 auto; display: block;">
-				</canvas>
+            <section>
+                <textarea id="input1" placeholder="Enter text here..." rows="20"></textarea>
+                <textarea id="input2" placeholder="Enter text here..." rows="20"></textarea>
+                <textarea id="output" placeholder="Output will appear here..." rows="20"></textarea>
+                <textarea id="output2" placeholder="Output will appear here..." rows="20"></textarea>
 
-				<script>
-					const input1 = document.getElementById('input1');
-					const input2 = document.getElementById('input2');
-					const output = document.getElementById('output');
-					const pattern = /C\d{6}\.\d{2}/; // Regex pattern
+                <h1>Quotes</h1>
 
-					function updateOutput()
-					{
-                        output.value = "";							
+                <!--
+                 <p>>
+                    Looking back in time, when was the last time you had a chance to reflect, to think, to rest? Our minds wander, day in day out. At Some point one should stop and breathe in the world. See the beauty of this existance, the beauty of emotions and feelings. Away from any and all distractions. Away from responsibilities. Away from oneself even.
+                    Begin wandering physically instead of mentally.
+                </p>
+                -->
+                <p>“When I am working on a problem, I never think about beauty but when I have finished, if the solution is not beautiful, I know it is wrong” </p>
+                <canvas id="myCanvas" width="800" height="800" style="margin: 0 auto; display: block;">
+                </canvas>
+
+                <script>
+                    const input1 = document.getElementById('input1');
+                    const input2 = document.getElementById('input2');
+                    const output = document.getElementById('output');
+                    const output2 = document.getElementById('output2');
+
+                    const pattern = /C\d{6}\.\d{2}/; // Regex pattern
+
+                    function updateOutput() {
+                        output.value = "";
+                        output2.value = "";
+
                         let input_1 = input1.value.split("\n");
-						let input_2 = input2.value.split("\n");
+                        let input_2 = input2.value.split("\n");
+                        let output_2 = output2.value;
 
-						for (let i = 0; i < input_1.length; i++)
-						{
-							try { input_1[i] = input_1[i].match(pattern)[0]; }
-							catch { }
-						}
 
-						for (let i = 0; i < input_2.length; i++)
-						{
-							try { input_2[i] = input_2[i].match(pattern)[0]; }
-							catch { }
-						}
+                        for (let i = 0; i < input_1.length; i++) {
+                            try { input_1[i] = input_1[i].match(pattern)[0]; }
+                            catch { }
+                        }
 
-						for (let i = 0; i < input_1.length; i++)
-						{
+                        for (let i = 0; i < input_2.length; i++) {
+                            try { input_2[i] = input_2[i].match(pattern)[0]; }
+                            catch { }
+                        }
+
+                        for (let i = 0; i < input_1.length; i++) {
                             output.value += input_2.indexOf(input_1[i]) + 1 + "\n";
-						}
+                        }
 
-						console.log(input_1, input_2);
-					}
+                        for (let i = 0; i < input_1.length; i++)
+                        {
+                            try {
+                                output2.value += input_1[i].match(pattern)[0] + " OR ";
 
-					input1.addEventListener('input', updateOutput);
-					input2.addEventListener('input', updateOutput);
+                            }
+                            catch {
 
-				</script>
-			</section>
+                            }
+                        }
+                        console.log(output2.value);
+                    }
+
+                    input1.addEventListener('input', updateOutput);
+                    input2.addEventListener('input', updateOutput);
+                    output2.addEventListener('input', updateOutput);
+
+
+                </script>
+            </section>
 		</div>
 	</body>
 </html>
